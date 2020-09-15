@@ -1,0 +1,41 @@
+type Department @model {
+  id: ID!
+  name: String
+  courses: [Course] @connection(name: "DepartmentCourse")
+}
+
+type Course @model {
+  id: ID!
+  name: String
+  department: Department @connection(name: "DepartmentCourse")
+  levels: [Level] @connection(name: "CourseLevel")
+  subjects: [Subject] @connection(name: "CourseSubject")
+  students: [Student] @connection(name: "CourseStudent")
+}
+
+type Level @model {
+  id: ID!
+  name: String
+  course: Course @connection(name: "CourseLevel")
+}
+
+type Subject @model(queries: null) {
+  id: ID!
+  name: String
+  course: Course @connection(name: "CourseSubject")
+  students: [SubjctStudents] @connection(name: "SubjectStudents")
+}
+
+type SubjctStudents @model(queries: null) {
+  id: ID!
+  name: String
+  subject: Subject @connection(name: "SubjectStudents")
+  student: Student @connection(name: "StudentSubjects")
+}
+
+type Student @model {
+  id: ID!
+  name: String
+  subjects: [SubjctStudents] @connection(name: "StudentSubjects")
+  course: Course @connection(name: "CourseStudent")
+}

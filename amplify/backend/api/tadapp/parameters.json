@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "tadapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authtadapp431c2406",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

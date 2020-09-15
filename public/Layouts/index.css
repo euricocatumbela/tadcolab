@@ -1,0 +1,110 @@
+/* Global decoration for the platform */
+html {
+  /* height: 100%; */
+  /* background-color: rgb(44, 40, 57); */
+}
+
+body {
+  font-family: Roboto, Sarala, sans-serif;
+  margin: 0;
+  height: 100%;
+  /* background-color: rgb(44, 40, 57); */
+}
+
+Line,
+text {
+  stroke: white;
+  opacity: 0 2;
+}
+
+/* Global decoration for the links */
+a {
+  color: #5334f5;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.Hero {
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  background-color: #146396;
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.HeroGroup {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 232px 50px;
+  text-align: center;
+}
+
+.Hero h1 {
+  margin: 0;
+  font-weight: 700;
+  color: azure;
+  font-size: 58px;
+  line-height: 1.45;
+}
+
+.Hero p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: azure;
+}
+
+.Hero input {
+  width: 300px;
+  height: 32px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
+
+.CardGroup {
+  width: 325px;
+  height: 430px;
+  border-style: solid;
+  border-radius: 20px;
+
+  background-color: black;
+}
+.Elements h2 {
+  margin: 50px 20px;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a54bc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ElementGroup {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+}
+@media (max-width: 640px) {
+  .ElementGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .HeroGroup {
+    padding: 100px 20px;
+  }
+  .Hero h1 {
+    font-size: 40px;
+  }
+
+  .Hero p {
+    font-size: 24px;
+  }
+}
